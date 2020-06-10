@@ -10,7 +10,6 @@ class JenisWebsiteController extends Controller
     public function data() {
     	$jenisWebsite = DB::table('jns_website')->get();
 
-    	return $jenisWebsite;
-    	// return view('pages.jenis-website.jenis-website-data');
+    	return view('pages.jenis-website.jenis-website-data', compact('jenisWebsite'));
     }
 }
